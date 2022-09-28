@@ -36,6 +36,17 @@ class LinkedList:
         while (last.next):
             last = last.next
         last.next = new_node
+       
+    def delatBeg(self):
+        if self.head is None:
+            print("List Empty")
+
+        elif self.head.next is None:
+            self.head = None
+
+        else:
+            temp = self.head
+            self.head = self.head.next
 
     def printList(self):
         temp = self.head
