@@ -47,6 +47,22 @@ class LinkedList:
         else:
             temp = self.head
             self.head = self.head.next
+            
+    def delatEnd(self):
+        if self.head is None:
+            print("List Empty")
+
+        elif self.head.next is None:
+            self.head = None
+
+        else:
+            temp = self.head
+            prev = None
+            while (temp.next):
+                prev = temp
+                temp = temp.next
+
+            prev.next = None
     
     def deleteNode(self, key):
         temp = self.head
